@@ -1,0 +1,72 @@
+global:
+  driftEnv: mainnet-beta
+  endPoints:
+    primary:
+      host: hmsoft.rpcpool.com
+      token: #TODO replace the key
+      isSecure: true
+      maxReferrer: 1
+    account:
+      host: hmsoft.rpcpool.com
+      token: #TODO replace the key
+      isSecure: true
+      maxReferrer: 1
+    chain:
+      host: hmsoft.rpcpool.com
+      token: #TODO replace the key
+      isSecure: true
+      maxReferrer: 1
+    events:
+      host: hmsoft.rpcpool.com
+      token: #TODO replace the key
+      isSecure: true
+      maxReferrer: 1
+    submit:
+      host: hmsoft.rpcpool.com
+      token: #TODO replace the key
+      isSecure: true
+      maxReferrer: 1
+#    second:
+#      host: hmsoft.rpcpool.com
+#      token:
+#      isSecure: true
+#      maxReferrer: 10
+  priorityFeeMethod: solana
+  eventSubscriber: true
+  eventSubscriberConnectionId: events
+  userMapConnection: account
+  slotSubscriberConnection: chain
+  priorityFeeSubscriberConnection: chain
+  blockhashSubscriberConnection: chain
+  eventSubscriberPollingInterval: 5000
+  bulkAccountLoaderPollingInterval: 5000
+  maxPriorityFeeMicroLamports: 10000
+  priorityFeeMultiplier: 5
+  keeperPrivateKey: #TODO replace private key
+  debug: true
+  debugOption:
+    targetTrace: true
+    targetMarketIndex: 0
+botConfigs:
+  filler:
+    botId: "filler"
+    dryRun: true
+    fillerPollingInterval: 1000
+    revertOnFailure: false
+    simulateTxForCUEstimate: true
+    minOrderUpdateTimeMs: 5000
+    tryOnOrderUpdate: true
+    minIntervalFillMs: 1000
+    processWaitTimeoutMs: 10
+    filterTryMuchCount: 5
+#  spotFiller:
+#    botId: "spot-filler"
+#    dryRun: true
+#    fillerPollingInterval: 1000
+#    revertOnFailure: false
+#    simulateTxForCUEstimate: true
+#    minOrderUpdateTimeMs: 2000
+#    tryOnOrderUpdate: true
+#    minIntervalFillMs: 50
+#    processWaitTimeoutMs: 10
+#    filterTryMuchCount: 5
